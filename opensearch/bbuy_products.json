@@ -218,6 +218,10 @@
           },
           "suggest": {
             "type": "completion"
+          },
+          "stemmed": {
+            "type": "text",
+            "analyzer": "english"
           }
 
         }
@@ -299,10 +303,27 @@
       },
       "shortDescription": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "stemmed": {
+          "type": "text",
+          "analyzer": "english"
+        }
       },
       "shortDescriptionHtml": {
-        "type": "keyword"
+        "type": "keyword",
+        "analyzer": "english",
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "stemmed": {
+          "type": "text",
+          "analyzer": "english"
+        }
       },
       "sku": {
         "type": "text",
